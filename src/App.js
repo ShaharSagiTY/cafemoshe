@@ -23,6 +23,7 @@ function App() {
         <SumTotal productsList={productsList}/>
         {/* <button onClick={()=>ProductsData.updateAllItems([])}>reset list</button> */}
       </div>
+      <p id='contactme'>made by Shahar Sagi <a href='mailto:shahar.sagi@gmail.com'>shahar.sagi@gmail.com</a></p>
     </div>
   );
 }

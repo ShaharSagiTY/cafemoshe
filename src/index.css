@@ -20,8 +20,16 @@ body {
 h1 {
   font-family: 'os_luizi_round_ffcregular', sans-serif;
   font-size: 300%;
-  color: rgb(212, 137, 127);
-  text-shadow: 2px 2px #572727;
+  color: rgb(136, 63, 53);
+  text-shadow: 2px 2px #e4a1a1;
+}
+
+h2 {
+    direction: rtl;
+    margin-top: 100px;
+    font-family: 'os_luizi_round_ffcregular', sans-serif;
+    font-size: 300%;
+    text-shadow: #ddd 2px 2px;
 }
 
 .App {
@@ -44,6 +52,7 @@ h1 {
 #mainTable {
   align-self:center;
   max-width: 330px;
+  min-height: 250px;
   margin: auto;
 }
 table {
@@ -179,3 +188,8 @@ h4 {
     }
 }
 
+#contactme {
+  font-size: 80%;
+  align-self: flex-start;
+  margin: 60px 40px;
+}

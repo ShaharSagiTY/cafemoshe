@@ -23,7 +23,6 @@ const MainTable = ({
           setProductsList(prevList =>
             prevList.map(product => ({ ...product, amount: null}))
           );
-          console.log(productsList)
         }catch(error){
           console.error("Error fetching data:", error);
         }finally {
@@ -32,7 +31,7 @@ const MainTable = ({
       }
       getData();
       console.log('fetching only once');
-    },[])
+    },[ProductsData,setProductsList])
 
     const handleValueChange = (id, property, newValue) => {
         setProductsList(prevList => 
@@ -90,7 +89,11 @@ const MainTable = ({
    }
 
     if (loading) {
-      return <div>Loading...</div>;
+      return (
+        <div id='mainTable'>
+            <h2>טוען נתונים...</h2>
+        </div>
+      )
     }
 
     return (
