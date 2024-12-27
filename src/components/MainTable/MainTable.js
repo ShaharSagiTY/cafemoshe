@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import MsgBox from '../MsgBox/MsgBox';
+import PasswordBox from '../PasswordBox/PasswordBox';
 
 const MainTable = ({
     productsList,
@@ -101,17 +102,14 @@ const MainTable = ({
                (<div className='btn' onClick={handleSave}>💾 שמור</div>)
             
             }
-
-            <div id='passwordBox' hidden={mypasswordHide}>
-                <p>הקלד סיסמא</p>
-                <input
-                    type='password'
-                    value={mypassword}
-                    onChange={e => handlePassChange(e.target.value)}
+            {!mypasswordHide &&
+                <PasswordBox
+                    mypassword={mypassword}
+                    handlePassChange={handlePassChange}
+                    handlePasswordCheck={handlePasswordCheck}
                 />
-                <br></br>
-                <button onClick={handlePasswordCheck}>פתח</button>
-            </div>
+            }
+            
             
             <table>
                 <thead>

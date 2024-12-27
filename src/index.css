@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'os_luizi_round_ffcregular';
+  src: url('os_luizi_round-ffc-web.woff2') format('woff2'),
+       url('os_luizi_round-ffc-web.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -8,13 +17,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-family: 'os_luizi_round_ffcregular', sans-serif;
+  font-size: 300%;
+  color: rgb(212, 137, 127);
+  text-shadow: 2px 2px #572727;
+}
+
 .App {
   display: flex;
   flex-direction: column;
 }
 
+.innerBackground {
+  position: relative;
+  content: "";
+  /* top: 40px; */
+  width: 90%;
+  align-self: center;
+  background-image: url(images/‏‏outdoor-cafe-bird-city-sparrow-sitting-table\ -\ small.jpg);
+  background-position: right bottom; 
+  margin: 40px;
+  padding-bottom: 40px;
+}
+
 #mainTable {
   align-self:center;
+  max-width: 330px;
+  margin: auto;
 }
 table {
   justify-self: center;
@@ -23,7 +53,7 @@ table {
   border: 1px solid darkslategray;
   line-height: 1.5;
   padding: 30px;
-  background-color: rgb(252, 252, 234);
+  background-color: rgba(252, 252, 234, 0.8);
 }
 table input {
   width: 40px;
@@ -65,7 +95,10 @@ th {
   height: 25px;
   cursor: pointer;
   text-decoration: underline;
-  color: brown;
+  font-weight: 600;
+  color: beige;
+  text-shadow: 1px 1px #572727;
+  /* background-color: rgba(245, 245, 220, 0.548); */
 }
 .removeProduct {
   color: red;
@@ -113,13 +146,19 @@ th {
 h4 {
   margin: 10px;
 }
+.sumTotal {
+  font-family: 'os_luizi_round_ffcregular', sans-serif;
+  font-size: 200%;
+  text-shadow: #ddd 2px 2px;
+}
+
 .sumTotal p {
   direction: rtl;
-  color: #880101;
   font-size: 200%;
   font-weight: 700;
-  margin: 0;
   text-decoration: underline;
+  color: #9b0000;
+  margin: 0;
 }
 
 @keyframes fade-in {

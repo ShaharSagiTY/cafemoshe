@@ -11,16 +11,18 @@ function App() {
 
   return (
     <div className="App">
-      <h1>☕ קפה משה ☕</h1>
-      <MainTable
-        ProductsData={ProductsData}
-        productsList={productsList}
-        setProductsList={setProductsList}
-        isEditDisabled={isEditDisabled}
-        setIsEditDisabled={setIsEditDisabled}
-      />
-      <SumTotal productsList={productsList}/>
-      {/* <button onClick={()=>ProductsData.updateAllItems([])}>reset list</button> */}
+      <div className='innerBackground'>
+        <h1>☕ קפה משה ☕</h1>
+        <MainTable
+          ProductsData={ProductsData}
+          productsList={productsList}
+          setProductsList={setProductsList}
+          isEditDisabled={isEditDisabled}
+          setIsEditDisabled={setIsEditDisabled}
+        />
+        <SumTotal productsList={productsList}/>
+        {/* <button onClick={()=>ProductsData.updateAllItems([])}>reset list</button> */}
+      </div>
     </div>
   );
 }
